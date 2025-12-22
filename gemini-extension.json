@@ -1,0 +1,18 @@
+{
+  "name": "gcp-gemini-troubleshooter",
+  "version": "1.0.0",
+  "description": "A read-only diagnostic advisor for GCP TSE workflows.",
+  "contextFileName": "GEMINI.md",
+  "excludeTools": [
+    "run_shell_command(gcloud compute instances delete)",
+    "run_shell_command(gcloud projects delete)",
+    "run_shell_command(rm -rf)"
+  ],
+  "settings": [
+    {
+      "name": "GOOGLE_CLOUD_PROJECT",
+      "description": "The target GCP Project ID for troubleshooting.",
+      "envVar": "GOOGLE_CLOUD_PROJECT"
+    }
+  ]
+}

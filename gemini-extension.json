@@ -1,18 +1,34 @@
 {
-  "name": "gcp-gemini-troubleshooter",
-  "version": "1.0.0",
-  "description": "A read-only diagnostic advisor for GCP TSE workflows.",
-  "contextFileName": "GEMINI.md",
+  "name": "gemini-gcp-troubleshooter",
+  "version": "2.1.0",
+  "description": "Multi-cloud diagnostic reasoning engine. Supports GCP, AWS, Azure, VMware, and Proxmox.",
   "excludeTools": [
-    "run_shell_command(gcloud compute instances delete)",
-    "run_shell_command(gcloud projects delete)",
-    "run_shell_command(rm -rf)"
+    "run_shell_command(rm*)",
+    "run_shell_command(*delete*)",
+    "run_shell_command(*terminate*)",
+    "run_shell_command(*destroy*)",
+    "run_shell_command(*update*)",
+    "run_shell_command(*patch*)",
+    "run_shell_command(*stop*)",
+    "run_shell_command(*purge*)"
   ],
-  "settings": [
-    {
-      "name": "GOOGLE_CLOUD_PROJECT",
-      "description": "The target GCP Project ID for troubleshooting.",
-      "envVar": "GOOGLE_CLOUD_PROJECT"
+  "mcpServers": {
+    "gcloud": {
+      "command": "npx",
+      "args": ["-y", "@gemini-cli-extensions/gcloud-mcp"]
+    },
+    "observability": {
+      "command": "npx",
+      "args": ["-y", "@gemini-cli-extensions/observability-mcp"]
+    },
+    "security": {
+      "command": "npx",
+      "args": ["-y", "@gemini-cli-extensions/security-mcp"]
+    },
+    "vertex": {
+      "command": "npx",
+      "args": ["-y", "@gemini-cli-extensions/vertex-mcp"]
     }
-  ]
+  },
+  "contextFileName": "GEMINI.md"
 }

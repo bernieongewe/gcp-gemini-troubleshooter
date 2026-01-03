@@ -48,10 +48,11 @@ Rather than bundling static docs, this implementation is grounded in the live of
 * **[Security & IAM](https://cloud.google.com/iam/docs):** Troubleshooting permission denials and Service Account scopes.
 * **[Vertex AI](https://cloud.google.com/vertex-ai/docs):** Diagnosing training jobs, endpoint latency, and quota issues.
 * **[Core Infrastructure](https://cloud.google.com/docs):** Networking (VPC), GCE, and GKE.
-* **[AWS Dcoumenantation](docs.aws.amazon.com):**
-* **[Azure Documentation](learn.microsoft.com/en-us/cli/azure):** 
-* **[VMware Documentation](docs.vmware.com):**
-* **[Proxmox Wiki](pve.proxmox.com/wiki):**
+* **[AWS Dcoumenantation](https://docs.aws.amazon.com):**
+* **[Azure Documentation](https://learn.microsoft.com/en-us/cli/azure):** 
+* **[VMware Documentation](https://docs.vmware.com):**
+* **[Proxmox Wiki](https://pve.proxmox.com/wiki):**
+* **[Openstack Documentation](https://docs.openstack.org):**
 
 ## 🚀 Quick Start (On a workstation with the required multi-cloud permissions)
 1. Clone the repository:

@@ -28,7 +28,7 @@ This tool relies on local CLLI (**`gcloud`, `awscli`, etc**) to fetch diagnostic
 graph TD
     User((User)) -->|Commands| CLI[Gemini CLI Opsmate]
     subgraph "Your Environment"
-        CLI -->|Context & Logs| G[Gemini 1.5 Flash]
+        CLI -->|Context & Logs| G[Gemini]
         CLI -->|Auth & Actions| Cloud[Cloud Resources]
     end
     subgraph "Target Systems"
@@ -60,3 +60,4 @@ Rather than bundling static docs, this tool is grounded in the live official doc
    bash setup-environment.sh
    gemini extensions install https://github.com/bernieongewe/gcp-gemini-troubleshooter
    ```
+> **Note:** This is a personal project and is not an officially supported Google product.

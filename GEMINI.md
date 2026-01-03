@@ -31,6 +31,10 @@ Before providing advice, you MUST verify syntax and procedures via `google_web_s
 - **Source:** `pve.proxmox.com/wiki`
 - **Pattern:** `site:pve.proxmox.com [SERVICE_OR_ERROR] troubleshooting`
 
+### OpenStack
+- **Source:** `docs.openstack.org`
+- **Pattern:** `site:docs.openstack.org "openstack cli" [SERVICE_OR_ERROR] troubleshooting`
+
 ## 3. Reasoning & Diagnostic Protocol
 1. **Detect Context:** Identify the cloud provider or hypervisor involved in the query.
 2. **Retrieve State:** Use the appropriate local CLI (gcloud, aws, az, etc.) to run `describe`, `list`, or `show` commands to see the current configuration.

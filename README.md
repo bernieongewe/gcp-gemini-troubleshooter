@@ -2,7 +2,7 @@
 
 **A Read-Only Diagnostic Advisor for Google Cloud Platform**
 
-`gcp-gemini-troubleshooter` is an experimental Gemini CLI extension designed for Cloud Architects, and Power Users. It acts as a reasoning engine that leverages the Gemini API to diagnose complex issues across a multi-cloud ecosystem without modifying your environment. I invite you to test, tune and extend this.
+`gcp-gemini-troubleshooter` is an experimental Gemini CLI implementation for Cloud Architects, and Power Users. It is prompted to as a reasoning engine that leverages the Gemini API to diagnose complex issues across a multi-cloud ecosystem without modifying your environment. I invite you to test, tune and extend this.
 
 ## 🛠 Project Structure
 This repository is kept intentionally lean to serve as a portable "sidecar" for your terminal:
@@ -42,12 +42,16 @@ graph TD
 ```
     
 ## 📚 Specialized Diagnostic Domains
-Rather than bundling static docs, this tool is grounded in the live official documentation for the following core GCP areas:
+Rather than bundling static docs, this implementation is grounded in the live official documentation for the following core GCP areas:
 
 * **[Observability](https://cloud.google.com/stackdriver/docs):** Deep dives into Cloud Logging, Monitoring, and Trace.
 * **[Security & IAM](https://cloud.google.com/iam/docs):** Troubleshooting permission denials and Service Account scopes.
 * **[Vertex AI](https://cloud.google.com/vertex-ai/docs):** Diagnosing training jobs, endpoint latency, and quota issues.
 * **[Core Infrastructure](https://cloud.google.com/docs):** Networking (VPC), GCE, and GKE.
+* **[AWS Dcoumenantation](docs.aws.amazon.com):**
+* **[Azure Documentation](learn.microsoft.com/en-us/cli/azure):** 
+* **[VMware Documentation](docs.vmware.com):**
+* **[Proxmox Wiki](pve.proxmox.com/wiki):**
 
 ## 🚀 Quick Start (On a workstation with the required multi-cloud permissions)
 1. Clone the repository:

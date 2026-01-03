@@ -24,8 +24,9 @@ This tool relies on local CLLI (**`gcloud`, `awscli`, etc**) to fetch diagnostic
 * **IAM Permissions:** It uses *your* local authenticated` session. You must have sufficient permissions (e.g., `Viewer`, `Security Viewer`) for the resources you are diagnosing.
 * **Non-Destructive:** The advisor is strictly read-only. It suggests paths; it does not execute state-changing commands.
 
+```mermaid
 graph TD
-    User((User)) -->|Commands| CLI[OpsMate CLI]
+    User((User)) -->|Commands| CLI[Gemini CLI Opsmate]
     subgraph "Your Environment"
         CLI -->|Context & Logs| G[Gemini 1.5 Flash]
         CLI -->|Auth & Actions| Cloud[Cloud Resources]
@@ -38,6 +39,7 @@ graph TD
     
     style CLI fill:#4285F4,stroke:#fff,stroke-width:2px,color:#fff
     style G fill:#8E24AA,stroke:#fff,stroke-width:2px,color:#fff
+```
     
 ## 📚 Specialized Diagnostic Domains
 Rather than bundling static docs, this tool is grounded in the live official documentation for the following core GCP areas:

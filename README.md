@@ -1,6 +1,6 @@
 # gcp-gemini-troubleshooter
 
-**A Read-Only Diagnostic Advisor for Google Cloud Platform**
+**A Read-Only Multi_Cloud Diagnostic Advisor**
 
 `gcp-gemini-troubleshooter` is an experimental Gemini CLI implementation for Cloud Architects, and Power Users. It is prompted to as a reasoning engine that leverages the Gemini API to diagnose complex issues across a multi-cloud ecosystem without modifying your environment. I invite you to test, tune and extend this.
 

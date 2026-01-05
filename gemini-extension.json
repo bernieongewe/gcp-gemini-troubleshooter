@@ -1,5 +1,5 @@
 {
-  "name": "gemini-gcp-troubleshooter",
+  "name": "gemini-multicloud-troubleshooter",
   "version": "2.1.0",
   "description": "Multi-cloud diagnostic reasoning engine. Supports GCP, AWS, Azure, VMware, and Proxmox.",
   "excludeTools": [
@@ -15,19 +15,11 @@
   "mcpServers": {
     "gcloud": {
       "command": "npx",
-      "args": ["-y", "@gemini-cli-extensions/gcloud-mcp"]
+      "args": ["-y", "@google-cloud/gcloud-mcp"]
     },
     "observability": {
       "command": "npx",
-      "args": ["-y", "@gemini-cli-extensions/observability-mcp"]
-    },
-    "security": {
-      "command": "npx",
-      "args": ["-y", "@gemini-cli-extensions/security-mcp"]
-    },
-    "vertex": {
-      "command": "npx",
-      "args": ["-y", "@gemini-cli-extensions/vertex-mcp"]
+      "args": ["-y", "@google-cloud/observability-mcp"]
     }
   },
   "contextFileName": "GEMINI.md"

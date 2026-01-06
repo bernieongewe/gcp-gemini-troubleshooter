@@ -24,31 +24,15 @@ This tool relies on local CLLI (**`gcloud`, `awscli`, etc**) to fetch diagnostic
 * **IAM Permissions:** It uses *your* local authenticated` session. You must have sufficient permissions (e.g., `Viewer`, `Security Viewer`) for the resources you are diagnosing.
 * **Non-Destructive:** The advisor is strictly read-only. It suggests paths; it does not execute state-changing commands.
 
-```mermaid
-graph TD
-    User((User)) -->|Commands| CLI[Gemini CLI Opsmate]
-    subgraph "Your Environment"
-        CLI -->|Context & Logs| G[Gemini]
-        CLI -->|Auth & Actions| Cloud[Cloud Resources]
-    end
-    subgraph "Target Systems"
-        Cloud -->|Read/Write| GCP[Google Cloud]
-        Cloud -->|SSH/API| PVE[Proxmox / Hybrid]
-    end
-    G -->|Analysis & Fixes| CLI
-    
-    style CLI fill:#4285F4,stroke:#fff,stroke-width:2px,color:#fff
-    style G fill:#8E24AA,stroke:#fff,stroke-width:2px,color:#fff
-```
     
 ## 📚 Specialized Diagnostic Domains
-Rather than bundling static docs, this implementation is grounded in the live official documentation for the following core GCP areas:
+Rather than bundling static docs, this implementation is grounded in the live official documentation for the following core areas:
 
-* **[Observability](https://cloud.google.com/stackdriver/docs):** Deep dives into Cloud Logging, Monitoring, and Trace.
-* **[Security & IAM](https://cloud.google.com/iam/docs):** Troubleshooting permission denials and Service Account scopes.
+* **[GCP Observability](https://cloud.google.com/stackdriver/docs):** Deep dives into Cloud Logging, Monitoring, and Trace.
+* **[GCP Security & IAM](https://cloud.google.com/iam/docs):** Troubleshooting permission denials and Service Account scopes.
 * **[Vertex AI](https://cloud.google.com/vertex-ai/docs):** Diagnosing training jobs, endpoint latency, and quota issues.
-* **[Core Infrastructure](https://cloud.google.com/docs):** Networking (VPC), GCE, and GKE.
-* **[AWS Dcoumenantation](https://docs.aws.amazon.com):**
+* **[GCP Core Infrastructure](https://cloud.google.com/docs):** Networking (VPC), GCE, and GKE.
+* **[AWS Dcoumentation](https://docs.aws.amazon.com):**
 * **[Azure Documentation](https://learn.microsoft.com/en-us/cli/azure):** 
 * **[VMware Documentation](https://docs.vmware.com):**
 * **[Proxmox Wiki](https://pve.proxmox.com/wiki):**

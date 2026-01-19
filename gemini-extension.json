@@ -1,7 +1,7 @@
 {
   "name": "gemini-multicloud-troubleshooter",
-  "version": "2.1.0",
-  "description": "Multi-cloud diagnostic reasoning engine. Supports GCP, AWS, Azure, VMware, and Proxmox.",
+  "version": "2.2.0",
+  "description": "Multi-cloud diagnostic reasoning engine. Expert at analyzing Workbench diagnostic zip files and troubleshooting GCP, AWS, Azure, VMware, and Proxmox.",
   "excludeTools": [
     "run_shell_command(rm*)",
     "run_shell_command(*delete*)",
@@ -10,7 +10,10 @@
     "run_shell_command(*update*)",
     "run_shell_command(*patch*)",
     "run_shell_command(*stop*)",
-    "run_shell_command(*purge*)"
+    "run_shell_command(*purge*)",
+    "run_shell_command(mv*)",
+    "run_shell_command(> *)",
+    "run_shell_command(echo * > *)"
   ],
   "mcpServers": {
     "gcloud": {
